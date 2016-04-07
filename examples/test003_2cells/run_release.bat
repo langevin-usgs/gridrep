@@ -1,0 +1,2 @@
+..\..\bin\gridrep.exe
+pause
