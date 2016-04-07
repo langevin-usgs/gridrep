@@ -26,3 +26,11 @@
 *.exe
 *.out
 *.app
+
+# Msvs
+Debug/
+x64/
+*.sln
+*.suo
+*.u2d
+*.pdb

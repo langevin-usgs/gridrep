@@ -1,0 +1,29 @@
+AUTO                       # viewpoint ("AUTO" or XVIEW YVIEW ZVIEW OVECX OVECY OVECZ OANGL)
+0.09                       # node radius
+T   0.  0.  0.   0.85      # T/F R G B Tr for drawing default (unhighlighted) cells
+T   0.  0.  0.   0.0       # T/F R G B Tr drawing highlighted cells
+T   0.  0.  0.   0.85      # T/F R G B Tr for drawing default (unhighlighted) nodes
+T   0.  0.  0.   0.0       # T/F R G B Tr drawing highlighted nodes
+T   0.  0.9 0.   0.6       # T/F R G B Tr for drawing horizontal-connection interfaces (highlighted cells only)
+T   0.  0.7 0.   0.0       # T/F R G B Tr for drawing horizontal-connection lengths (highlighted cells only)
+T   0.  0.  1.   0.6       # T/F R G B Tr for drawing vertical-connection interfaces (highlighted cells only)
+T   0.  0.  1.   0.0       # T/F R G B Tr for drawing vertical-connection lengths (highlighted cells only)
+T                          # T/F for whether BOTH cells need to be highlighted to draw connection
+SOME                       # Highlighting: ALL, NONE, or SOME
+ 1    F                    # If SOME, for each cell: T/F for highlighting cell and its associated objects
+ 2    F
+ 3    F
+ 4    F
+ 5    F
+ 6    F
+ 7    F
+ 8    F
+ 9      T
+10      T
+11      T
+12    F
+13    F
+14      T
+15      T
+16    F
+17      T
