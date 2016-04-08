@@ -1,0 +1,2 @@
+..\..\bin\gridrepd.exe
+pause

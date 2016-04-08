@@ -1,0 +1,9 @@
+7  5                                             # no. of cells and max no. of vertices per cell
+ 1     1     1   2     1 8 9 5 2     # for each cell: index, node, top_elev, bot_elev, vertices (ccw);
+ 2     2     1   2     2 5 6 3 0     #   primary vertices positive; refinement vertices negative
+ 3     3     1   2     3 6 7 4 0
+ 4     4     1   2     5 9 10 6 0
+ 5     5     1   2     6 10 11 7 0
+ 6     6     1   2     8 12 13 9 0
+ 7     7     1   2     9 13 14 11 10
+ 
