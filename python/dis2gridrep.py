@@ -44,10 +44,12 @@ def mkver(m):
 
 
 def mknod(m):
-    nodes = m.dis.nrow * m.dis.ncol
+    nodes = m.dis.nlay * m.dis.nrow * m.dis.ncol
     nod = np.empty((nodes, 3), dtype=np.float)
-    nod[:, 0] = m.dis.sr.xcentergrid.flatten()
-    nod[:, 1] = m.dis.sr.ycentergrid.flatten()
+    xc = np.tile(m.dis.sr.xcentergrid.flatten(), m.dis.nlay)
+    yc = np.tile(m.dis.sr.ycentergrid.flatten(), m.dis.nlay)    
+    nod[:, 0] = xc
+    nod[:, 1] = yc
     nod[:, 2] = m.dis.zcentroids.flatten()
     f = open('example.nod', 'w')
     f.write('{}\n'.format(nodes))
@@ -145,7 +147,7 @@ def main(namfile, zscale):
         raise Exception('Namefile file not found: {}'.format(namfile))
 
     # load model
-    m = flopy.modflow.Modflow.load(namfile, check=False)
+    m = flopy.modflow.Modflow.load(namfile, check=False, verbose=True)
     ver = mkver(m)
     nod = mknod(m)
     elv = mkelv(m, zscale)
